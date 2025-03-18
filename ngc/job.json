@@ -1,0 +1,23 @@
+{
+    "aceName": "nv-us-west-2",
+    "aceInstance": "dgx1v.32g.8.norm",
+    "command": "/thinkingearth/oci/job.sh",
+    "datasetMounts": [
+        // TODO: Adapt dataset
+        {
+            "id": 1613472,
+            "containerMountPoint": "/data/KITTI-360"
+        },
+    ],
+    "description": "ThinkingEarth training experiment.",
+    "name": "thinkingearth-debug",
+    "resultContainerMountPoint": "/workspace",
+    "reservedLabels": ["_wl___computer_vision"],
+    "userLabels": ["ml___TODO"],
+    "userSecretsSpec": [
+        {
+            "name": "WANDB",
+            "allKeys": true
+        }
+    ]
+}

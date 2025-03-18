@@ -1,0 +1,42 @@
+[build-system]
+requires = [
+    "setuptools~=69.5",
+    "setuptools_scm",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pangu-weather"
+description = "Pangu Inference."
+authors = [
+    {name = "Franziska Gerken", email = "fgerken@nvidia.com"},
+]
+maintainers = [
+    {name = "Franziska Gerken", email = "fgerken@nvidia.com"},
+]
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE.txt" }
+dependencies = [
+    "matplotlib",
+    "numpy",
+    "pytorch_lightning",
+    "torch",
+    "torchvision",
+]
+dynamic = ["version"]
+
+[tool.isort]
+known_third_party = ["wandb"]
+profile = "black"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+include = ["pangu*"]
+
+[tool.setuptools_scm]
+write_to = "pangu/_version.py"
+write_to_template = '__version__ = "{version}"'

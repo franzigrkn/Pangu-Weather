@@ -1,0 +1,17 @@
+# Similar syntax to .gitignore
+build
+demo
+dist
+models
+results
+wandb
+.git/lfs
+*.egg-info
+**/__pycache__/
+input_data/
+output_data/
+checkpoints/
+**/*.zarr
+**/*.h5
+**/*.nc
+**/*.onnx

@@ -1,3 +1,11 @@
 numpy
+h5netcdf
+h5py
+netcdf4
+scipy
+pandas
+xarray
+dask
+zarr
 onnx==1.12.0
 onnxruntime-gpu==1.14.0
