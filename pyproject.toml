@@ -21,9 +21,6 @@ license = { file = "LICENSE.txt" }
 dependencies = [
     "matplotlib",
     "numpy",
-    "pytorch_lightning",
-    "torch",
-    "torchvision",
 ]
 dynamic = ["version"]
 

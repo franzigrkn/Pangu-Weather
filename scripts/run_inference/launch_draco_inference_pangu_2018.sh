@@ -34,7 +34,7 @@ NODES=1
 GPUS=1
 
 # NAME OF EXPERIMENT
-EXP_NAME="$PROJECT_NAME_SHORT-Inference_2018_pangu_test_dockerignore"
+EXP_NAME="$PROJECT_NAME_SHORT-Inference_2018_pangu_check_timing_20"
 
 # RUN COMMANDconfigs
 RUN_CMD="python pangu/evaluate_2018.py "
