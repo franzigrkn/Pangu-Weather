@@ -10,10 +10,10 @@ import fsspec
 import zarr
 
 ###############
-part = 14
+part = 15
 # between 1 and 15
-# started: 1,2,3,4
-# started: 10,11,12,13
+# started: 1,2,3,4,5,6,7,8 - todo: 9
+# started: 10,11,12,13,14,15
 ###############
 
 
@@ -239,7 +239,11 @@ def inference_2018(part):
             print(f"*** PROCESSING SAMPLE {start_sample} to {end_sample} ***")
             print(f"    Size of surface data: {f_surface['data'].shape}")
             print(f"    Size of atmosphericdata: {f_atmospheric['data'].shape}")
-            for id in range(0,100):
+            if part==15:
+                end_range=60
+            else:
+                end_range=100
+            for id in range(0,end_range):
                 start = time.time()
                 # Load the upper-air numpy arrays
                 input_upper = f_atmospheric["data"][:, id, :, :, :]
